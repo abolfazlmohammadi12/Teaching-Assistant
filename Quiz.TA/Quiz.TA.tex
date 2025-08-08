@@ -1,0 +1,72 @@
+% انتخاب کلاس سند article با اندازه فونت ۱۲ و کاغذ A4
+\documentclass[12pt,a4paper]{article}
+
+% بسته fontspec برای انتخاب فونت‌های سیستمی (ضروری برای xepersian)
+\usepackage{fontspec}
+
+% بسته xepersian برای پشتیبانی از زبان فارسی
+\usepackage{xepersian}
+
+% انتخاب فونت فارسی (باید فونت BNAZANIN.TTF در سیستم نصب یا کنار فایل باشد)
+\settextfont{BNAZANIN.TTF}
+
+% بسته‌های ریاضی برای نمادها و معادلات
+\usepackage{amsmath, amssymb, amstext}
+
+% برای درج تصاویر
+\usepackage{graphicx}
+
+% تنظیمات حاشیه صفحه
+\usepackage{geometry}
+
+% برای استفاده از رنگ‌ها (مثلاً در متن یا جدول‌ها)
+\usepackage{xcolor}
+
+% بسته‌ای برای تنظیم هدر و فوترهای زیبا
+\usepackage{fancyhdr}
+
+% تعیین اندازه حاشیه‌ها 
+\geometry{margin=1in}
+
+% فعال‌سازی سبک fancy برای صفحه‌آرایی هدر و فوتر
+\pagestyle{fancy}
+
+% محتوای هدر سمت چپ: نام آزمون یا تمرین
+\lhead{کوییز درس .... }
+
+% محتوای هدر وسط: نام دانشکده
+\chead{دانشکده فیزیک دانشگاه صنعتی خواجه نصیرالدین طوسی}
+
+% محتوای هدر سمت راست: تاریخ امروز (خودکار)
+\rhead{\today}
+
+% شروع محتوای سند
+\begin{document}
+	
+	% جدول اطلاعات فردی (نام و نام خانوادگی، شماره دانشجویی)
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\textbf{نام و نام خانوادگی:} & \textbf{شماره دانشجویی:} \\
+		\hline
+	\end{tabular}
+	
+	% بخش سوالات بدون شماره‌گذاری در عنوان
+	\section*{سوالات:}
+	
+	\begin{enumerate}
+		% سوال شماره ۱
+		\item 
+		صورت سوال اول
+		
+		% اضافه کردن تصویر به سوال (در صورت نیاز)، فعلاً به صورت کامنت
+		%\begin{figure}[h]
+		%    \centering
+		%    \includegraphics[width=0.5\textwidth]{FoxitPDFReader_nTeEJVaLnL.png}
+		%    \caption{}
+		%    \label{fig:square_particles}
+		%\end{figure}
+		
+	\end{enumerate}
+	
+	% پایان سند
+\end{document}

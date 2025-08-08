@@ -1,0 +1,102 @@
+%---------------------------------------------------
+% کلاس سند: article برای اسناد متنی، با اندازه کاغذ A4 و فونت پایه 16
+\documentclass[a4paper,16pt]{article}
+
+% بسته‌های ریاضی برای معادلات و نمادهای پیشرفته
+\usepackage{amsmath, amssymb, amstext}
+
+% بسته رنگ برای استفاده از رنگ در متن یا محیط‌ها
+\usepackage{xcolor}
+
+% بسته گرافیک برای درج تصاویر
+\usepackage{graphicx}
+
+% تنظیمات حاشیه صفحه
+\usepackage{geometry}
+
+% بسته لینک‌دهی (هایپرلینک‌ها)
+\usepackage{hyperref}
+
+% بسته صفحه‌آرایی برای تنظیم هدر و فوتر
+\usepackage{fancyhdr}
+
+
+% بسته xepersian برای پشتیبانی از زبان فارسی با XeLaTeX
+\usepackage{xepersian}
+
+% تعیین فونت فارسی (فایل فونت باید موجود باشد یا در سیستم نصب باشد)
+\settextfont{BNAZANIN.TTF}
+
+% تنظیم اندازه حاشیه‌ها از هر طرف برابر با 1 اینچ
+\geometry{margin=1in}
+
+% تنظیم سبک fancy برای سربرگ و پاورقی
+\pagestyle{fancy}
+
+% سمت چپ هدر: مشخص‌کننده سری تمرین و نام درس
+\lhead{تمرین سری ... درس ... }
+
+% وسط هدر: نام دانشکده
+\chead{دانشکده فیزیک دانشگاه صنعتی خواجه نصیرالدین طوسی}
+
+% سمت راست هدر: تاریخ روز به‌صورت خودکار
+\rhead{\today}
+
+% پایین صفحه: شماره صفحه
+\cfoot{\thepage}
+
+% شروع سند
+\begin{document}
+	
+	% صفحه عنوان (بدون هدر و فوتر)
+	\thispagestyle{empty}
+	\begin{center}
+		% لوگوی دانشگاه (باید فایل تصویر در مسیر پروژه باشد)
+		\includegraphics[width=0.5\textwidth]{K._N._Toosi_University_of_Technology.png} \\[10pt] 
+		
+		% عنوان سند
+		\textbf{\LARGE عنوان:}\\[20pt]
+		
+		% نیم‌سال تحصیلی
+		\textbf{\LARGE نیم‌سال تحصیلی: }\\[10pt]
+		
+		% نام مدرس درس
+		\textbf{\Large مدرس: }\\[10pt]
+		
+		% مبحث تمرین 
+		\textbf{\Large مبحث تمرین:  }\\[10pt]
+		
+		% مهلت تحویل تمرین
+		\textbf{\Large مهلت تحویل: }
+	\end{center}
+	
+	% صفحه جدید برای ادامه سند
+	\newpage
+	
+	% ایجاد فهرست مطالب به‌صورت خودکار (براساس \section و \subsection و ...)
+	\tableofcontents
+	\newpage
+	
+	% شروع بخش سوالات - سوال اول
+	\section{سوال اول}
+	صورت سوال اول این‌جا نوشته می‌شود.
+	\\
+	
+	% اضافه کردن تصویر در صورت نیاز (در حال حاضر کامنت شده)
+	%\begin{figure}[h]
+	%    \centering
+	%    \includegraphics[width=0.5\textwidth]{FoxitPDFReader_nTeEJVaLnL.png}
+	%    \caption{}
+	%    \label{fig:square_particles}
+	%\end{figure}
+	
+	% بخش دوم سوالات - سوال امتیازی
+	\section{سوال امتیازی}
+	صورت سوال امتیازی این‌جا نوشته می‌شود.
+	
+	
+	\vspace{10pt}
+	\textbf{موفق باشید.}
+	
+	% پایان سند
+\end{document}
